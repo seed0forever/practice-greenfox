@@ -1,12 +1,65 @@
-*.class
+# Own additions #
+_materials/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
 # Package Files #
-*.jar
-*.war
-*.ear
+#*.jar
+#*.war
+#*.ear
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Nano editor: .gitignore
+.gitignore~
+
+# Mac OS #
+.DS_Store
+
+# Atom #
+.~lock.*#
+
+# IntelliJ #
+out/
+.idea/
+*.iws
+*.iml
+*.ipr
+*.xml
+*.class
+
+# Gradle #
+.gradle/
+build/
+gradle.properties
+local.properties
+
+!build.gradle
+!build.properties
+!settings.gradle
+
+# Gradle Wrapper #
+!gradlew
+!gradlew.bat
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+
