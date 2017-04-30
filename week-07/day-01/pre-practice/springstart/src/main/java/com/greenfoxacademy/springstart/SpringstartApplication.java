@@ -19,4 +19,10 @@ public class SpringstartApplication {
   public String hello() {
 		return "Hello World!";
   }
+
+  @RequestMapping(value="/another")
+  @ResponseBody
+  public String hello2() {
+		return "Another Pirate here, arrgg! :)";
+  }
 }
