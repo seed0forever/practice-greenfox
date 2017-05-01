@@ -8,7 +8,7 @@
 <body>
 <table>
   <tr th:each="hello,iterStat : ${helloElements}">
-    <td th:text="${iterStat.count} + ' ' + ${hello} + ', ' + ${name} + '!' " th:style="'color: ' + ${color[iterStat.index]} + ';' + ' font-size: ' + ${fontSize[iterStat.index]} + ';'"></td>
+    <td th:text="${hello} + ', ' + ${name} + '!' " th:style="'color: ' + ${color[iterStat.index]} + ';' + ' font-size: ' + ${fontSize[iterStat.index]} + ';'"></td>
   </tr>
 </table>
 </body>
