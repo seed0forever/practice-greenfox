@@ -23,7 +23,24 @@ public class HelloAllWebController {
     String[] randomHelloColors = fillWithRandomColors(HELLOS.length);
     model.addAttribute("color", randomHelloColors);
 
+    String[] randomFontSizes = fillWithRandomFontSizes(HELLOS.length);
+    model.addAttribute("fontSize", randomFontSizes);
+
     return "hello-all";
+  }
+
+  private String[] fillWithRandomFontSizes(int numberOfFontSizes) {
+    String[] fontSizeArray = new String[numberOfFontSizes];
+    for (int i = 0; i < numberOfFontSizes; i++) {
+      fontSizeArray[i] = generateRandomFontSize();
+    }
+    return fontSizeArray;
+  }
+
+  private String generateRandomFontSize() {
+    String fontSizeFormat = "%dpx";
+    int randomFontSize = 12 + (int) (Math.random() * 15);
+    return String.format(fontSizeFormat, randomFontSize);
   }
 
   private String[] fillWithRandomColors(int numberOfColors) {
