@@ -12,7 +12,7 @@ public class HelloWebController {
   private final AtomicLong counter = new AtomicLong();
 
   @RequestMapping("/web/greeting")
-  public String greeting(@RequestParam(value="name", required = false, defaultValue = "World") String name, Model model) {
+  public String greeting(@RequestParam(value="name", defaultValue = "World") String name, Model model) {
     model.addAttribute("name", name);
     model.addAttribute("counter", counter.incrementAndGet());
     return "greeting";
